@@ -9,9 +9,9 @@ import atexit
 app = Flask(__name__)
 
 # Twilio Credentials (Directly hardcoded)
-TWILIO_ACCOUNT_SID = 'AC8d429a4fc17ce6ba154e46a0ed168424'  # Replace with your actual account SID
-TWILIO_AUTH_TOKEN = '3817fe7fb703ce5b1647ff7ac0afc080'    # Replace with your actual auth token
-TWILIO_PHONE_NUMBER = '+15204472353'  # Your Twilio phone number
+TWILIO_ACCOUNT_SID = ''  # Replace with your actual account SID
+TWILIO_AUTH_TOKEN = ''    # Replace with your actual auth token
+TWILIO_PHONE_NUMBER = ''  # Your Twilio phone number
 
 # Initialize Twilio Client
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
@@ -21,10 +21,10 @@ def create_connection():
     try:
         conn = pyodbc.connect(
             'Driver={ODBC Driver 18 for SQL Server};'
-            'Server=taskscheduler-server.database.windows.net;'
-            'Database=TaskSchedulerDB;'
-            'UID=sqladmin;'
-            'PWD=Pratham@18;'  # Ensure this is secure
+            'Server= ;' #your server
+            'Database= ;'#your database
+            'UID= ;' #your user id
+            'PWD= ;'  # Ensure this is secure your password
             'Timeout=30;'
         )
         return conn
